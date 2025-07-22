@@ -101,7 +101,7 @@ const FactoryConsultancyPage = () => {
             <div className="relative">
               <div className="relative z-10">
                 <img 
-                  src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="https://images.pexels.com/photos/236709/pexels-photo-236709.jpeg"
                   alt="Modern factory with optimized energy flow"
                   className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
                 />
