@@ -8,13 +8,15 @@ import {
   FaHeart,
   FaGem,
 } from "react-icons/fa";
-import { IoMdPlanet } from "react-icons/io";
+import { IoIosContacts, IoMdPlanet } from "react-icons/io";
 import { GiCrystalBall, GiMagicSwirl } from "react-icons/gi";
 import Link from "next/link";
+import Button from "./Button";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isConsultancyOpen, setIsConsultancyOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,19 +42,92 @@ function Navbar() {
           {/* Logo */}
           <Link href="/">
             <div className="flex-shrink-0 flex items-center">
-              <IoMdPlanet className="h-10 w-10 text-black" />
-              <span className="ml-3 text-2xl font-bold tracking-tight text-black">
-                Astral<span className="text-gray-600">Vision</span>
+              <IoMdPlanet className="h-10 w-10 text-purple-600" />
+              <span className="ml-3 text-2xl font-bold tracking-tight text-purple-700">
+                Astral<span className="text-purple-600">Vision</span>
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+            {/* Consultancy Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsConsultancyOpen(true)}
+              onMouseLeave={() => setIsConsultancyOpen(false)}
+            >
+              <a
+                href="/services"
+                className="text-black hover:text-gray-600 transition-colors flex items-center font-medium">
+                <IoIosContacts className="mr-2 text-md" /> Consultancy
+                <svg 
+                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${isConsultancyOpen ? 'rotate-180' : ''}`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </a>
+              
+              {/* Dropdown Menu */}
+              <div className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 transition-all duration-200 ${
+                isConsultancyOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
+              }`}>
+                <a 
+                  href="/consultancy/home" 
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors"
+                >
+                  <div className="flex items-center">
+                    <span className="text-sm font-medium">Home</span>
+                  </div>
+                  <span className="text-xs text-gray-500">Residential consultancy</span>
+                </a>
+                <a 
+                  href="/consultancy/office" 
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors"
+                >
+                  <div className="flex items-center">
+                    <span className="text-sm font-medium">Office</span>
+                  </div>
+                  <span className="text-xs text-gray-500">Corporate consultancy</span>
+                </a>
+                <a 
+                  href="/consultancy/factory" 
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors"
+                >
+                  <div className="flex items-center">
+                    <span className="text-sm font-medium">Factory</span>
+                  </div>
+                  <span className="text-xs text-gray-500">Industrial consultancy</span>
+                </a>
+                <a 
+                  href="/consultancy/commercial" 
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors"
+                >
+                  <div className="flex items-center">
+                    <span className="text-sm font-medium">Commercial</span>
+                  </div>
+                  <span className="text-xs text-gray-500">Business consultancy</span>
+                </a>
+                <hr className="my-2 border-gray-200" />
+                <a 
+                  href="/meet-astrologer" 
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors"
+                >
+                  <div className="flex items-center">
+                    <span className="text-sm font-medium">Meet the Astrologer</span>
+                  </div>
+                  <span className="text-xs text-gray-500">Connect with our expert</span>
+                </a>
+              </div>
+            </div>
+            
             <a
               href="/services"
               className="text-black hover:text-gray-600 transition-colors flex items-center font-medium">
-              <GiCrystalBall className="mr-2 text-sm" /> Services
+              <GiCrystalBall className="mr-2 text-md" /> Services
             </a>
             <a
               href="/contact"
@@ -60,9 +135,11 @@ function Navbar() {
               Contact
             </a>
 
-            <button className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-medium transition-all duration-300">
-              Get Reading
-            </button>
+            <Link href="tel:+15551234567">
+              <Button className=" font-medium transition-all duration-300">
+                Call Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -85,48 +162,53 @@ function Navbar() {
       <div
         className={`lg:hidden ${
           isMenuOpen ? "block" : "hidden"
-        } bg-black/95 backdrop-blur-md`}>
+        } bg-white/95 backdrop-blur-md shadow-lg`}>
         <div className="px-4 pt-2 pb-6 space-y-2">
+          {/* Consultancy with expandable submenu */}
+          <div className="space-y-1">
+            <div className="flex items-center px-4 py-3 rounded-xl text-gray-700 font-medium">
+              <IoIosContacts className="mr-3" /> Consultancy
+            </div>
+            <div className="ml-4 space-y-1">
+              <a
+                href="/consultancy/home"
+                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300">
+                Home
+              </a>
+              <a
+                href="/consultancy/office"
+                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300">
+                Office
+              </a>
+              <a
+                href="/consultancy/factory"
+                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300">
+                Factory
+              </a>
+              <a
+                href="/consultancy/commercial"
+                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300">
+                Commercial
+              </a>
+              <a
+                href="/meet-astrologer"
+                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300">
+                Meet the Astrologer
+              </a>
+            </div>
+          </div>
+          
           <a
-            href="#horoscopes"
-            className="flex items-center px-4 py-3 rounded-xl text-white hover:bg-purple-600/30 transition-all duration-300">
-            <FaStar className="mr-3" /> Horoscopes
-          </a>
-          <a
-            href="#services"
-            className="flex items-center px-4 py-3 rounded-xl text-white hover:bg-purple-600/30 transition-all duration-300">
+            href="/services"
+            className="flex items-center px-4 py-3 rounded-xl text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 font-medium">
             <GiCrystalBall className="mr-3" /> Services
           </a>
+          
           <a
-            href="#compatibility"
-            className="flex items-center px-4 py-3 rounded-xl text-white hover:bg-purple-600/30 transition-all duration-300">
-            <FaHeart className="mr-3" /> Compatibility
-          </a>
-          <a
-            href="#tarot"
-            className="flex items-center px-4 py-3 rounded-xl text-white hover:bg-purple-600/30 transition-all duration-300">
-            <GiMagicSwirl className="mr-3" /> Tarot
-          </a>
-          <a
-            href="#crystals"
-            className="flex items-center px-4 py-3 rounded-xl text-white hover:bg-purple-600/30 transition-all duration-300">
-            <FaGem className="mr-3" /> Crystals
-          </a>
-          <a
-            href="#blog"
-            className="px-4 py-3 rounded-xl text-white hover:bg-purple-600/30 transition-all duration-300 block">
-            Blog
-          </a>
-          <a
-            href="#contact"
-            className="px-4 py-3 rounded-xl text-white hover:bg-purple-600/30 transition-all duration-300 block">
+            href="/contact"
+            className="flex items-center px-4 py-3 rounded-xl text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 font-medium">
             Contact
           </a>
-          <div className="pt-4">
-            <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300">
-              Get Reading
-            </button>
-          </div>
         </div>
       </div>
     </nav>

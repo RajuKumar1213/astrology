@@ -9,14 +9,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "AstralVision - Your Cosmic Destiny Awaits",
-  description: "Discover your cosmic truth through personalized astrology readings, horoscopes, and spiritual guidance. Expert astrologers, 98% satisfaction rate, trusted by 25,000+ souls.",
-  keywords: "astrology, horoscopes, birth chart, tarot reading, zodiac signs, spiritual guidance, numerology, cosmic destiny",
+  description:
+    "Discover your cosmic truth through personalized astrology readings, horoscopes, and spiritual guidance. Expert astrologers, 98% satisfaction rate, trusted by 25,000+ souls.",
+  keywords:
+    "astrology, horoscopes, birth chart, tarot reading, zodiac signs, spiritual guidance, numerology, cosmic destiny",
   authors: [{ name: "AstralVision Team" }],
   viewport: "width=device-width, initial-scale=1",
   themeColor: "#8b5cf6",
+
   openGraph: {
     title: "AstralVision - Your Cosmic Destiny Awaits",
-    description: "Unlock the mysteries of your destiny through ancient astrological wisdom and modern spiritual insights.",
+    description:
+      "Unlock the mysteries of your destiny through ancient astrological wisdom and modern spiritual insights.",
     type: "website",
     locale: "en_US",
     siteName: "AstralVision",
@@ -24,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AstralVision - Your Cosmic Destiny Awaits",
-    description: "Discover your cosmic truth through personalized astrology readings and spiritual guidance.",
+    description:
+      "Discover your cosmic truth through personalized astrology readings and spiritual guidance.",
   },
   robots: {
     index: true,

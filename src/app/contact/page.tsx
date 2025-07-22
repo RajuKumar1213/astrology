@@ -136,7 +136,7 @@ const ContactPage = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-gray-600 to-pink-600 hover:from-gray-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-gray-500/25"
+                  className="w-full bg-gradient-to-r from-gray-600 to-purple-600 hover:from-gray-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-gray-500/25"
                 >
                   Send Message ✨
                 </button>
@@ -215,7 +215,7 @@ const ContactPage = () => {
                     <span className="text-sm text-gray-700">Facebook</span>
                   </a>
                   <a href="#" className="flex flex-col items-center p-4 bg-gray-600/20 rounded-xl hover:bg-gray-600/30 transition-all duration-300">
-                    <FaInstagram className="text-2xl text-pink-500 mb-2" />
+                    <FaInstagram className="text-2xl text-purple-500 mb-2" />
                     <span className="text-sm text-gray-700">Instagram</span>
                   </a>
                   <a href="#" className="flex flex-col items-center p-4 bg-gray-600/20 rounded-xl hover:bg-gray-600/30 transition-all duration-300">
@@ -226,14 +226,14 @@ const ContactPage = () => {
               </div>
 
               {/* Emergency Reading */}
-              <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-8 border border-red-500/30">
+              <div className="bg-gradient-to-r from-red-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-red-500/30">
                 <div className="text-center">
-                  <GiCrystalBall className="text-4xl text-orange-400 mx-auto mb-4" />
+                  <GiCrystalBall className="text-4xl text-purple-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">Need Immediate Guidance?</h3>
                   <p className="text-gray-700 mb-4">
                     Our emergency reading service is available for urgent spiritual matters
                   </p>
-                  <button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                  <button className="bg-gradient-to-r from-purple-600 to-purple-600 hover:from-red-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
                     Emergency Reading
                   </button>
                 </div>

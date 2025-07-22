@@ -10,6 +10,7 @@ import Blog from '@/components/Blog';
 import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
 import FormPopup from '@/components/FormPopup';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <Newsletter />
       <Footer />
       <FormPopup />
+      <WhatsAppButton />
     </div>
   );
 }
