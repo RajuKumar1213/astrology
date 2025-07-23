@@ -11,7 +11,9 @@ const FormPopup = () => {
     email: '',
     birthDate: '',
     birthTime: '',
-    zodiacSign: '',
+    birthPlace: '',
+    gender: '',
+    mobile: '',
     interest: ''
   });
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -74,18 +76,18 @@ const FormPopup = () => {
           </div>
 
           <div className="relative z-10">
-            <div className="text-6xl mb-4">🔮</div>
+            <div className="text-6xl mb-4">🏠</div>
             <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4">
-              Unlock Your Cosmic Destiny!
+              Transform Your Life with Vastu!
             </h2>
             <p className="text-gray-300 text-lg mb-6">
-              Get a FREE personalized astrology reading tailored just for you
+              Get a FREE personalized Vastu consultation 
             </p>
             
             {/* Special Offer Badge */}
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6">
               <FaGift />
-              <span>LIMITED TIME: 100% FREE Reading</span>
+              <span>LIMITED TIME: 100% FREE Vastu Analysis</span>
             </div>
           </div>
         </div>
@@ -110,18 +112,33 @@ const FormPopup = () => {
             </div>
             <div>
               <label className="block text-purple-300 text-sm font-semibold mb-2">
-                Email Address *
+                Email Address (Optional)
               </label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                required
                 className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
                 placeholder="your@email.com"
               />
             </div>
+          </div>
+
+          {/* Mobile Number */}
+          <div>
+            <label className="block text-purple-300 text-sm font-semibold mb-2">
+              Mobile Number *
+            </label>
+            <input
+              type="tel"
+              name="mobile"
+              value={formData.mobile}
+              onChange={handleInputChange}
+              required
+              className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
+              placeholder="+91 12345 67890"
+            />
           </div>
 
           {/* Birth Date and Time Row */}
@@ -141,43 +158,52 @@ const FormPopup = () => {
             </div>
             <div>
               <label className="block text-purple-300 text-sm font-semibold mb-2">
-                Birth Time (Optional)
+                Birth Time *
               </label>
               <input
                 type="time"
                 name="birthTime"
                 value={formData.birthTime}
                 onChange={handleInputChange}
+                required
                 className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
               />
             </div>
           </div>
 
-          {/* Zodiac Sign */}
-          <div>
-            <label className="block text-purple-300 text-sm font-semibold mb-2">
-              Zodiac Sign
-            </label>
-            <select
-              name="zodiacSign"
-              value={formData.zodiacSign}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
-            >
-              <option value="" className="bg-purple-900">Select your sign</option>
-              <option value="aries" className="bg-purple-900">Aries ♈</option>
-              <option value="taurus" className="bg-purple-900">Taurus ♉</option>
-              <option value="gemini" className="bg-purple-900">Gemini ♊</option>
-              <option value="cancer" className="bg-purple-900">Cancer ♋</option>
-              <option value="leo" className="bg-purple-900">Leo ♌</option>
-              <option value="virgo" className="bg-purple-900">Virgo ♍</option>
-              <option value="libra" className="bg-purple-900">Libra ♎</option>
-              <option value="scorpio" className="bg-purple-900">Scorpio ♏</option>
-              <option value="sagittarius" className="bg-purple-900">Sagittarius ♐</option>
-              <option value="capricorn" className="bg-purple-900">Capricorn ♑</option>
-              <option value="aquarius" className="bg-purple-900">Aquarius ♒</option>
-              <option value="pisces" className="bg-purple-900">Pisces ♓</option>
-            </select>
+          {/* Birth Place and Gender Row */}
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-purple-300 text-sm font-semibold mb-2">
+                Birth Place *
+              </label>
+              <input
+                type="text"
+                name="birthPlace"
+                value={formData.birthPlace}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
+                placeholder="City, State, Country"
+              />
+            </div>
+            <div>
+              <label className="block text-purple-300 text-sm font-semibold mb-2">
+                Gender *
+              </label>
+              <select
+                name="gender"
+                value={formData.gender}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
+              >
+                <option value="" className="bg-purple-900">Select Gender</option>
+                <option value="male" className="bg-purple-900">Male</option>
+                <option value="female" className="bg-purple-900">Female</option>
+                <option value="other" className="bg-purple-900">Other</option>
+              </select>
+            </div>
           </div>
 
           {/* Interest */}
@@ -192,34 +218,40 @@ const FormPopup = () => {
               className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
             >
               <option value="" className="bg-purple-900">Choose your focus</option>
-              <option value="love" className="bg-purple-900">Love & Relationships</option>
-              <option value="career" className="bg-purple-900">Career & Money</option>
+              <option value="home-vastu" className="bg-purple-900">Home Vastu Consultation</option>
+              <option value="office-vastu" className="bg-purple-900">Office Vastu Consultation</option>
+              <option value="factory-vastu" className="bg-purple-900">Factory Vastu Consultation</option>
+              <option value="commercial-vastu" className="bg-purple-900">Commercial Vastu Consultation</option>
+              <option value="vastu-visit" className="bg-purple-900">Vastu Site Visit</option>
+              <option value="career" className="bg-purple-900">Career & Money Guidance</option>
               <option value="spiritual" className="bg-purple-900">Spiritual Growth</option>
               <option value="health" className="bg-purple-900">Health & Wellness</option>
-              <option value="family" className="bg-purple-900">Family & Friends</option>
-              <option value="future" className="bg-purple-900">Future Predictions</option>
             </select>
           </div>
 
           {/* Benefits List */}
           <div className="bg-white/5 rounded-xl p-4 border border-purple-500/30">
-            <h3 className="text-white font-semibold mb-3">Your FREE reading includes:</h3>
+            <h3 className="text-white font-semibold mb-3">Your FREE consultation includes:</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li className="flex items-center space-x-2">
                 <span className="text-green-400">✓</span>
-                <span>Personalized birth chart analysis</span>
+                <span>Complete Vastu analysis of your space</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="text-green-400">✓</span>
-                <span>Love compatibility insights</span>
+                <span>Personalized Vastu remedies & solutions</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="text-green-400">✓</span>
-                <span>Career and life path guidance</span>
+                <span>Direction-wise room placement guidance</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="text-green-400">✓</span>
-                <span>Lucky numbers and colors</span>
+                <span>Prosperity & health enhancement tips</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="text-green-400">✓</span>
+                <span>Birth chart insights (astrology bonus)</span>
               </li>
             </ul>
           </div>
@@ -229,7 +261,7 @@ const FormPopup = () => {
             type="submit"
             className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
           >
-            Get My FREE Reading Now! 🔮
+            Submit, We will connect you shortly. 🏠
           </button>
 
           {/* Trust Elements */}

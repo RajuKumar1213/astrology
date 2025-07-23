@@ -44,7 +44,7 @@ function Navbar() {
             <div className="flex-shrink-0 flex items-center">
               <IoMdPlanet className="h-10 w-10 text-purple-600" />
               <span className="ml-3 text-2xl font-bold tracking-tight text-purple-700">
-                Astral<span className="text-purple-600">Vision</span>
+                Neelam<span className="text-purple-600">astrovastu</span>
               </span>
             </div>
           </Link>

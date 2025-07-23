@@ -19,7 +19,7 @@ const Footer = () => {
                 <FaStar className="absolute -top-1 -right-1 text-yellow-400 text-xs animate-pulse" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Astral<span className="from-blue-400 to-cyan-400">Vision</span>
+                Neelama<span className="from-blue-400 to-cyan-400">strovastu</span>
               </span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -93,7 +93,7 @@ const Footer = () => {
                 <div className="p-2 bg-purple-900/30 rounded-full group-hover:bg-purple-400 transition-colors">
                   <FaEnvelope className="text-purple-400 group-hover:text-white" />
                 </div>
-                <span className="text-gray-300 group-hover:text-white transition-colors">hello@astralvision.com</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors">hello@Neelamastrovastu.com</span>
               </div>
               <div className="flex items-start space-x-3 group">
                 <div className="p-2 bg-purple-900/30 rounded-full group-hover:bg-purple-400 transition-colors mt-1">
@@ -133,7 +133,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} AstralVision. All cosmic rights reserved.
+            © {new Date().getFullYear()} Neelamastrovastu. All cosmic rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-400 hover:text-purple-300 text-sm transition-colors">Privacy Policy</a>

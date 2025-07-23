@@ -5,51 +5,51 @@ import { FaStar, FaQuoteLeft } from 'react-icons/fa';
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    location: 'New York, NY',
+    name: 'Priya Sharma',
+    location: 'Mumbai, India',
     rating: 5,
-    text: 'The birth chart reading was incredibly accurate and insightful. It helped me understand my life patterns and make better decisions. Truly transformative!',
-    service: 'Birth Chart Reading',
+    text: 'After implementing the Residential Vastu recommendations, our home feels completely transformed. The positive energy is palpable, and our family relationships have improved dramatically.',
+    service: 'Residential Vastu',
     image: '👩‍💼'
   },
   {
-    name: 'Michael Chen',
-    location: 'Los Angeles, CA',
+    name: 'Rajesh Kumar',
+    location: 'Delhi, India',
     rating: 5,
-    text: 'The love compatibility reading saved my relationship! The insights about our communication styles were spot-on and helped us reconnect.',
-    service: 'Love Compatibility',
+    text: 'The Commercial Vastu consultation for our office was a game-changer. Our business sales increased by 40% within 6 months of implementing the suggested changes!',
+    service: 'Commercial Vastu',
     image: '👨‍💻'
   },
   {
-    name: 'Emily Rodriguez',
-    location: 'Miami, FL',
+    name: 'Anita Gupta',
+    location: 'Bangalore, India',
     rating: 5,
-    text: 'The tarot reading was mind-blowing. Every card resonated with my situation perfectly. The guidance I received was exactly what I needed to hear.',
-    service: 'Tarot Reading',
+    text: 'The Vastu remedies suggested for our apartment were simple yet incredibly effective. No demolition was needed, and the positive changes were immediate.',
+    service: 'Vastu Remedies',
     image: '👩‍🎨'
   },
   {
-    name: 'David Thompson',
-    location: 'Seattle, WA',
+    name: 'Suresh Patel',
+    location: 'Ahmedabad, India',
     rating: 5,
-    text: 'The career guidance reading helped me find my true calling. Within 3 months of following the advice, I landed my dream job. Amazing accuracy!',
-    service: 'Career Guidance',
+    text: 'The Industrial Vastu guidance for our factory layout improved worker productivity and reduced accidents. The harmony in our workplace is remarkable.',
+    service: 'Industrial Vastu',
     image: '👨‍🔬'
   },
   {
-    name: 'Lisa Park',
-    location: 'Chicago, IL',
+    name: 'Meera Singh',
+    location: 'Pune, India',
     rating: 5,
-    text: 'The spiritual counseling session was deeply healing. I felt understood and guided towards a path of self-discovery and inner peace.',
-    service: 'Spiritual Counseling',
+    text: 'The combination of Vastu and astrology consultation gave us the perfect timing for our new home construction. Everything fell into place beautifully.',
+    service: 'Vastu + Astrology',
     image: '👩‍🏫'
   },
   {
-    name: 'James Wilson',
-    location: 'Austin, TX',
+    name: 'Vikram Mehta',
+    location: 'Chennai, India',
     rating: 5,
-    text: 'The numerology reading revealed patterns I never noticed before. The insights about my life path number changed my perspective completely.',
-    service: 'Numerology Reading',
+    text: 'The plot selection guidance using Vastu principles helped us choose the perfect land for our dream home. The prosperity we\'ve experienced since moving is incredible.',
+    service: 'Plot Selection Vastu',
     image: '👨‍🎤'
   }
 ];
@@ -75,16 +75,16 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-orange-50 to-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-6">
-            What Our Clients Say
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600 mb-6">
+            Success Stories
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover how our mystical services have transformed lives and guided souls 
-            towards their true cosmic destiny.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover how our Vastu consultations and astrological guidance have transformed 
+            homes, businesses, and lives across India.
           </p>
         </div>
 

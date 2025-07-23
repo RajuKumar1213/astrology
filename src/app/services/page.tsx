@@ -3,16 +3,14 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { FaHome, FaBriefcase, FaHeart, FaUserAstronaut } from 'react-icons/fa';
+import { FaHome, FaBriefcase, FaIndustry, FaBuilding, FaTools, FaGem, FaLeaf, FaMapMarkedAlt, FaHeart, FaStar } from 'react-icons/fa';
+import Link from 'next/link';
 
 type ServiceType = {
   id: string;
   title: string;
   description: string;
   icon: React.JSX.Element;
-  duration: string;
-  price: number;
-  originalPrice: number;
   includes: string[];
   color: string;
   bgColor: string;
@@ -21,93 +19,159 @@ type ServiceType = {
 
 const servicesData = [
   {
-    id: 'home',
-    title: 'Home Harmony',
-    description: 'Create peaceful, balanced energy in your living space with cosmic alignment.',
-    icon: <FaHome className="text-4xl" />,
-    duration: '60 minutes',
-    price: 149,
-    originalPrice: 199,
+    id: 'vastu-consultation',
+    title: 'Vastu Consultation',
+    description: 'Online & On-Site consultations with detailed energy analysis of your property.',
+    icon: <FaStar className="text-4xl" />,
     includes: [
-      'Space Clearing Guidance',
-      'Feng Shui Analysis',
-      'Ideal Room Layouts',
-      'Protection Rituals',
-      'Family Harmony Tips',
-      'Sacred Space Creation'
+      'Online & On-Site Consultations',
+      'Detailed energy analysis',
+      'Complete property assessment',
+      'Personalized recommendations',
+      'Follow-up support'
     ],
     color: 'text-purple-600',
     bgColor: 'bg-purple-50',
     popular: true
   },
   {
-    id: 'office',
-    title: 'Office Energy',
-    description: 'Boost productivity and success with professionally aligned workspace energy.',
-    icon: <FaBriefcase className="text-4xl" />,
-    duration: '75 minutes',
-    price: 179,
-    originalPrice: 229,
+    id: 'residential-vastu',
+    title: 'Residential Vastu',
+    description: 'Complete home Vastu solutions for apartments & houses without demolition.',
+    icon: <FaHome className="text-4xl" />,
     includes: [
-      'Career Energy Assessment',
-      'Success Crystal Placement',
-      'Optimal Desk Positioning',
-      'Client Attraction Tips',
-      'Business Protection',
-      'Team Harmony Guidance'
+      'Room placement & direction analysis',
+      'Kitchen, bedroom, toilet alignment',
+      'Pooja room positioning',
+      'Apartment & rental solutions',
+      'No demolition required'
     ],
     color: 'text-blue-600',
     bgColor: 'bg-blue-50'
   },
   {
-    id: 'love',
-    title: 'Love & Relationships',
-    description: 'Attract and nurture loving relationships with cosmic alignment.',
-    icon: <FaHeart className="text-4xl" />,
-    duration: '65 minutes',
-    price: 159,
-    originalPrice: 209,
+    id: 'commercial-vastu',
+    title: 'Commercial Vastu',
+    description: 'Business layout optimization for better sales, focus & cash flow.',
+    icon: <FaBriefcase className="text-4xl" />,
     includes: [
-      'Love Energy Assessment',
-      'Partner Compatibility',
-      'Self-Love Practices',
-      'Attraction Techniques',
-      'Healing Past Hurts',
-      'Sacred Space Creation'
+      'Offices, Shops, Clinics setup',
+      'Business layout correction',
+      'Cash drawer placement',
+      'Entry point optimization',
+      'Sales enhancement strategies'
+    ],
+    color: 'text-green-600',
+    bgColor: 'bg-green-50'
+  },
+  {
+    id: 'industrial-vastu',
+    title: 'Industrial Vastu',
+    description: 'Factory setup planning with optimal machine placement & energy flow.',
+    icon: <FaIndustry className="text-4xl" />,
+    includes: [
+      'Factory setup planning',
+      'Machine placement optimization',
+      'Entry/exit flow design',
+      'Labor area alignment',
+      'Production zone balancing'
+    ],
+    color: 'text-orange-600',
+    bgColor: 'bg-orange-50'
+  },
+  {
+    id: 'architecture-interior',
+    title: 'Architecture & Interior Vastu',
+    description: 'Vastu-friendly floor plans and interior layout integration.',
+    icon: <FaBuilding className="text-4xl" />,
+    includes: [
+      'Floor plan review',
+      'Interior layout design',
+      'Furniture placement guide',
+      'Color & décor suggestions',
+      'Construction integration'
+    ],
+    color: 'text-indigo-600',
+    bgColor: 'bg-indigo-50'
+  },
+  {
+    id: 'vastu-remedies',
+    title: 'Vastu Remedies',
+    description: 'Energy correction using crystals, mirrors & colors - no demolition needed.',
+    icon: <FaTools className="text-4xl" />,
+    includes: [
+      'Pyramids & Yantras placement',
+      'Crystal energy healing',
+      'Mirror positioning',
+      'Color therapy solutions',
+      'Affordable apartment solutions'
+    ],
+    color: 'text-red-600',
+    bgColor: 'bg-red-50'
+  },
+  {
+    id: 'energy-balancing',
+    title: 'Energy Balancing & Aura Cleansing',
+    description: 'Space healing techniques with chakra-based energy mapping.',
+    icon: <FaLeaf className="text-4xl" />,
+    includes: [
+      'Space healing techniques',
+      'Negativity removal',
+      'Chakra energy mapping',
+      'Spiritual balance restoration',
+      'Monthly energy tune-ups'
+    ],
+    color: 'text-teal-600',
+    bgColor: 'bg-teal-50'
+  },
+  {
+    id: 'plot-selection',
+    title: 'Plot Selection & Land Analysis',
+    description: 'Ideal plot selection with Vastu-compliant layout planning.',
+    icon: <FaMapMarkedAlt className="text-4xl" />,
+    includes: [
+      'Plot shape & direction analysis',
+      'Soil quality assessment',
+      'Layout planning guidance',
+      'Auspicious timing suggestions',
+      'Bhoomi poojan consultation'
+    ],
+    color: 'text-yellow-600',
+    bgColor: 'bg-yellow-50'
+  },
+  {
+    id: 'relationships-wellness',
+    title: 'Vastu for Relationships & Wellness',
+    description: 'Room allocation for harmony, peace & mental wellness.',
+    icon: <FaHeart className="text-4xl" />,
+    includes: [
+      'Room allocation for harmony',
+      'Sleeping direction guidance',
+      'Couple compatibility zones',
+      'Child room optimization',
+      'Mental health improvement'
     ],
     color: 'text-pink-600',
     bgColor: 'bg-pink-50'
   },
   {
-    id: 'personal-growth',
-    title: 'Personal Growth',
-    description: 'Unlock your highest potential with personalized cosmic guidance.',
-    icon: <FaUserAstronaut className="text-4xl" />,
-    duration: '90 minutes',
-    price: 199,
-    originalPrice: 249,
+    id: 'astrology-vastu-combo',
+    title: 'Astrology + Vastu Combo',
+    description: 'Personalized spatial planning based on your birth chart.',
+    icon: <FaGem className="text-4xl" />,
     includes: [
-      'Life Purpose Analysis',
-      'Strength Identification',
-      'Blockage Removal',
-      'Manifestation Techniques',
-      'Spiritual Development',
-      'Personalized Practices'
+      'Birth chart analysis',
+      'Personalized spatial planning',
+      'Astrological + Vastu sync',
+      'Custom remedies',
+      'Financial & health solutions'
     ],
-    color: 'text-teal-600',
-    bgColor: 'bg-teal-50'
+    color: 'text-purple-600',
+    bgColor: 'bg-purple-50'
   }
 ];
 
 const ServicesPage = () => {
-  const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
-  const [showBookingModal, setShowBookingModal] = useState(false);
-
-  const handleBookService = (service: ServiceType) => {
-    setSelectedService(service);
-    setShowBookingModal(true);
-  };
-
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -116,68 +180,75 @@ const ServicesPage = () => {
       <section className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Cosmic Alignment Services
+            🏡 Our Vastu Services
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transform your spaces and relationships with our expert energy alignment services.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+            Bring balance, harmony, and prosperity into your space—without breaking a wall.
+          </p>
+          <p className="text-lg text-gray-500 italic">
+            Transform your home, office, or business with expert Vastu guidance
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {servicesData.map((service) => (
               <div
                 key={service.id}
-                className={`rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 ${service.bgColor}`}
+                className={`relative rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 ${service.bgColor}`}
               >
                 {/* Popular Badge */}
                 {service.popular && (
-                  <div className="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <div className="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10">
                     POPULAR
                   </div>
                 )}
 
-                <div className="p-6 text-center">
+                <div className="p-6 text-center h-full flex flex-col">
                   {/* Icon */}
                   <div className={`${service.color} mb-4 flex justify-center items-center`}>
                     {service.icon}
                   </div>
                   
-                  {/* Title & Pricing */}
+                  {/* Title */}
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                   </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
+                  </div>
                   
                   {/* Description */}
-                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed flex-grow">
                     {service.description}
                   </p>
                   
                   {/* Key Features */}
                   <div className="mb-6 text-left">
                     <h4 className="font-semibold text-gray-900 mb-3 text-sm">Includes:</h4>
-                    <ul className="space-y-2">
-                      {service.includes.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <svg className="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <ul className="space-y-1">
+                      {service.includes.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-xs text-gray-600">
+                          <svg className="w-3 h-3 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                           </svg>
                           {feature}
                         </li>
                       ))}
+                      {service.includes.length > 3 && (
+                        <li className="text-xs text-gray-500 italic">
+                          +{service.includes.length - 3} more features
+                        </li>
+                      )}
                     </ul>
                   </div>
                   
                   {/* CTA Button */}
-                  <button 
-                    onClick={() => handleBookService(service)}
-                    className={`w-full bg-black text-white font-semibold py-3 px-4 rounded-lg transition-all hover:shadow-md`}
-                  >
-                    Book Service
-                  </button>
+                  <Link href="/contact">
+                    <button className={`w-full bg-black text-white font-semibold py-3 px-4 rounded-lg transition-all hover:shadow-md hover:bg-gray-800`}>
+                      Get Consultation
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -185,69 +256,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Client Experiences</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="text-yellow-400 mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">
-                &quot;The Home Harmony service completely transformed our family dynamics. We&apos;re communicating better and the energy in our house feels lighter.&quot;
-              </p>
-              <div className="font-medium text-gray-900">- Sarah J.</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="text-yellow-400 mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">
-                &quot;After the Office Energy alignment, my team became more cohesive and our productivity increased by 30% in just one month!&quot;
-              </p>
-              <div className="font-medium text-gray-900">- Michael T.</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Booking Modal */}
-      {showBookingModal && selectedService && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl max-w-md w-full p-8 shadow-2xl">
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-900">Book Your Session</h3>
-              <button 
-                onClick={() => setShowBookingModal(false)}
-                className="text-gray-400 hover:text-gray-600"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-              </button>
-            </div>
-            
-            <div className="text-center mb-6">
-              <div className={`${selectedService.color} mb-4`}>
-                {selectedService.icon}
-              </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">{selectedService.title}</h4>
-              <div className="text-2xl font-bold text-purple-600">${selectedService.price}</div>
-            </div>
-
-            <div className="space-y-4 mb-6">
-              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 rounded-lg">
-                Book Now
-              </button>
-              <button className="w-full border border-purple-600 text-purple-600 font-bold py-3 rounded-lg hover:bg-purple-50">
-                Schedule Consultation
-              </button>
-            </div>
-
-            <div className="text-center text-sm text-gray-500">
-              <p>100% Satisfaction Guarantee</p>
-              <p>Secure & Confidential Booking</p>
-            </div>
-          </div>
-        </div>
-      )}
 
       <Footer />
     </div>
