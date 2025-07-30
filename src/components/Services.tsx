@@ -9,7 +9,7 @@ const Services = () => {
     {
       title: "Residential Vastu",
       description: "Complete home Vastu solutions for harmony, health, and prosperity. Perfect for apartments and houses.",
-      icon: <FaHome className="text-4xl text-purple-600" />,
+      icon: <FaHome className="text-4xl text-amber-600" />,
       category: "vastu"
     },
     {
@@ -21,13 +21,13 @@ const Services = () => {
     {
       title: "Industrial Vastu",
       description: "Factory and manufacturing unit Vastu planning for optimal productivity and worker harmony.",
-      icon: <FaIndustry className="text-4xl text-blue-600" />,
+      icon: <FaIndustry className="text-4xl text-orange-600" />,
       category: "vastu"
     },
     {
       title: "Vastu Remedies",
       description: "Simple, effective solutions using crystals, yantras, and energy correction - no demolition needed.",
-      icon: <FaTools className="text-4xl text-purple-600" />,
+      icon: <FaTools className="text-4xl text-yellow-700" />,
       category: "vastu"
     },
     {
@@ -45,7 +45,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-purple-50">
+    <section className="py-16 bg-gradient-to-b from-amber-50 to-orange-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -78,7 +78,7 @@ const Services = () => {
                 <div className="mb-4">
                   <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
                     service.category === 'vastu' 
-                      ? 'bg-purple-100 text-purple-700' 
+                      ? 'bg-amber-100 text-amber-700' 
                       : 'bg-purple-100 text-purple-700'
                   }`}>
                     {service.category === 'vastu' ? 'Vastu Science' : 'Astrology'}
@@ -93,7 +93,7 @@ const Services = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-purple-100 to-purple-100 rounded-2xl p-8 border border-purple-200">
+          <div className="bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl p-8 border border-amber-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Space?
             </h3>
@@ -103,12 +103,12 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services">
-                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                <button className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                   View All Services
                 </button>
               </Link>
               <Link href="/contact">
-                <button className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                <button className="border-2 border-amber-600 text-amber-700 hover:bg-amber-600 hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                   Book Free Consultation
                 </button>
               </Link>

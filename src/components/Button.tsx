@@ -18,7 +18,7 @@ function Button({
   return (
     <button
       onClick={onClick}
-      className={`bg-gradient-to-r from-purple-600 to-purple-600 hover:from-purple-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 ${className}`}
+      className={`bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${className}`}
       disabled={disabled}>
       {children}
     </button>

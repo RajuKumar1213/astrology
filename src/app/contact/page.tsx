@@ -29,7 +29,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen  text-black">
+    <div className="min-h-screen bg-white/70 text-black">
       <Navbar />
       
       {/* Hero Section */}
@@ -46,12 +46,12 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 text-black sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-500/30">
-              <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+              <h2 className="text-3xl font-bold text-black mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
@@ -144,15 +144,15 @@ const ContactPage = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-8">
+            <div className="space-y-8 text-black">
               {/* Contact Details */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-500/30">
-                <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+                <h3 className="text-2xl font-bold  mb-6">Get in Touch</h3>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <FaPhone className="text-gray-600 text-xl mt-1" />
                     <div>
-                      <h4 className="text-white font-semibold">Phone</h4>
+                      <h4 className="text-black font-semibold">Phone</h4>
                       <p className="text-gray-700">+1 (555) 123-STAR</p>
                       <p className="text-gray-700">+1 (555) 123-MOON</p>
                     </div>
@@ -160,7 +160,7 @@ const ContactPage = () => {
                   <div className="flex items-start space-x-4">
                     <FaEnvelope className="text-gray-600 text-xl mt-1" />
                     <div>
-                      <h4 className="text-white font-semibold">Email</h4>
+                      <h4 className=" font-semibold">Email</h4>
                       <p className="text-gray-700">hello@astralvision.com</p>
                       <p className="text-gray-700">readings@astralvision.com</p>
                     </div>
@@ -168,7 +168,7 @@ const ContactPage = () => {
                   <div className="flex items-start space-x-4">
                     <FaMapMarkerAlt className="text-gray-600 text-xl mt-1" />
                     <div>
-                      <h4 className="text-white font-semibold">Address</h4>
+                      <h4 className=" font-semibold">Address</h4>
                       <p className="text-gray-700">
                         123 Cosmic Avenue<br />
                         Mystical City, MC 12345<br />
@@ -181,7 +181,7 @@ const ContactPage = () => {
 
               {/* Business Hours */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-500/30">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                <h3 className="text-2xl font-bold  mb-6 flex items-center">
                   <FaClock className="mr-3 text-gray-600" />
                   Reading Hours
                 </h3>
@@ -208,7 +208,7 @@ const ContactPage = () => {
 
               {/* Social Media */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-500/30">
-                <h3 className="text-2xl font-bold text-white mb-6">Follow Our Journey</h3>
+                <h3 className="text-2xl font-bold  mb-6">Follow Our Journey</h3>
                 <div className="grid grid-cols-3 gap-4">
                   <a href="#" className="flex flex-col items-center p-4 bg-gray-600/20 rounded-xl hover:bg-gray-600/30 transition-all duration-300">
                     <FaFacebook className="text-2xl text-blue-700 mb-2" />

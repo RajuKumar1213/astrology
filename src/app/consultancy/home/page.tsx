@@ -52,19 +52,19 @@ const HomeConsultancyPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 via-white to-pink-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="flex items-center space-x-2 text-purple-600">
+                <div className="flex items-center space-x-2 text-orange-600">
                   <FaHome className="text-xl" />
                   <span className="text-sm font-semibold uppercase tracking-wide">Home Consultancy</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                   Transform Your Home Into a 
-                  <span className="text-purple-600"> Sacred Sanctuary</span>
+                  <span className="text-orange-600"> Sacred Sanctuary</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Create harmonious living spaces that nurture your family&apos;s well-being, prosperity, and happiness through ancient Vastu principles and cosmic energy alignment.
@@ -74,8 +74,8 @@ const HomeConsultancyPage = () => {
               {/* Key Features */}
               <div className="grid md:grid-cols-2 gap-4">
                 {features.map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3 p-4 bg-white rounded-lg shadow-sm border border-purple-100">
-                    <div className="text-purple-600 text-xl mt-1">
+                  <div key={index} className="flex items-start space-x-3 p-4 bg-white rounded-lg shadow-sm border border-orange-100">
+                    <div className="text-orange-600 text-xl mt-1">
                       {feature.icon}
                     </div>
                     <div>
@@ -106,7 +106,7 @@ const HomeConsultancyPage = () => {
                   className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
                 />
                 {/* Floating Elements */}
-                <div className="absolute -top-6 -left-6 bg-purple-600 text-white p-4 rounded-xl shadow-lg">
+                <div className="absolute -top-6 -left-6 bg-orange-600 text-white p-4 rounded-xl shadow-lg">
                   <GiCrystalBall className="text-2xl" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-pink-500 text-white p-4 rounded-xl shadow-lg">
@@ -114,7 +114,7 @@ const HomeConsultancyPage = () => {
                 </div>
               </div>
               {/* Background Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-200/30 to-pink-200/30 rounded-2xl transform rotate-3 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-200/30 to-pink-200/30 rounded-2xl transform rotate-3 -z-10"></div>
             </div>
           </div>
         </div>
@@ -145,22 +145,22 @@ const HomeConsultancyPage = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-purple-600">1</span>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl font-bold text-orange-600">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Site Survey</h3>
               <p className="text-gray-600">Comprehensive measurement and mapping of your home with directional analysis</p>
             </div>
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-purple-600">2</span>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl font-bold text-orange-600">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Energy Audit</h3>
               <p className="text-gray-600">Complete Vastu and cosmic energy assessment of all rooms and spaces</p>
             </div>
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-purple-600">3</span>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl font-bold text-orange-600">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Remedies</h3>
               <p className="text-gray-600">Customized solutions and sacred remedies to enhance positive energy flow</p>
@@ -170,7 +170,7 @@ const HomeConsultancyPage = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-pink-50">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -191,7 +191,7 @@ const HomeConsultancyPage = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -203,7 +203,7 @@ const HomeConsultancyPage = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -216,7 +216,7 @@ const HomeConsultancyPage = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                 placeholder="Enter your email address"
               />
             </div>
@@ -230,7 +230,7 @@ const HomeConsultancyPage = () => {
                   value={formData.location}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                   placeholder="e.g., Mumbai, Maharashtra"
                 />
               </div>
@@ -242,7 +242,7 @@ const HomeConsultancyPage = () => {
                   value={formData.area}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                   placeholder="e.g., 2000 sq ft"
                 />
               </div>
@@ -255,7 +255,7 @@ const HomeConsultancyPage = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                 placeholder="Tell us about any specific issues you're facing..."
               />
             </div>

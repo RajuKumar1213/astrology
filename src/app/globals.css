@@ -1,7 +1,104 @@
 @import "tailwindcss";
 
+/* Custom Vastu-inspired color variables */
+:root {
+  /* Primary Vastu colors - representing the 5 elements */
+  --vastu-earth: #8B4513;      /* Deep brown - Earth element */
+  --vastu-water: #4682B4;      /* Steel blue - Water element */
+  --vastu-fire: #CD853F;       /* Peru/warm terracotta - Fire element */
+  --vastu-air: #9ACD32;        /* Yellow green - Air element */
+  --vastu-space: #F5E6D3;      /* Warm cream - Space element */
+  
+  /* Directional colors according to Vastu */
+  --vastu-north: #228B22;      /* Forest green - North (Kubera) */
+  --vastu-south: #B22222;      /* Fire brick red - South (Yama) */
+  --vastu-east: #FF8C00;       /* Dark orange - East (Indra) */
+  --vastu-west: #4169E1;       /* Royal blue - West (Varuna) */
+  --vastu-center: #F0E68C;     /* Khaki - Center (Brahma) */
+  
+  /* Sacred geometry inspired colors */
+  --sacred-gold: #DAA520;      /* Goldenrod - Divine proportion */
+  --sacred-copper: #B87333;    /* Dark goldenrod - Sacred metal */
+  --sacred-white: #FFF8DC;     /* Cornsilk - Purity */
+  --sacred-deep: #2F4F4F;      /* Dark slate gray - Depth */
+}
+
 body {
-  background: white;
-  color: black;
+  background: linear-gradient(135deg, var(--vastu-space) 0%, var(--sacred-white) 100%);
+  color: var(--sacred-deep);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+}
+
+/* Vastu-inspired background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--vastu-north) 0%, transparent 50%),
+    radial-gradient(circle at 75% 25%, var(--vastu-east) 0%, transparent 50%),
+    radial-gradient(circle at 25% 75%, var(--vastu-west) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, var(--vastu-south) 0%, transparent 50%);
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Custom scrollbar for Vastu theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sacred-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vastu-earth);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sacred-copper);
+}
+
+/* Utility classes for Vastu colors */
+.bg-vastu-earth { background-color: var(--vastu-earth); }
+.bg-vastu-water { background-color: var(--vastu-water); }
+.bg-vastu-fire { background-color: var(--vastu-fire); }
+.bg-vastu-air { background-color: var(--vastu-air); }
+.bg-vastu-space { background-color: var(--vastu-space); }
+
+.text-vastu-earth { color: var(--vastu-earth); }
+.text-vastu-water { color: var(--vastu-water); }
+.text-vastu-fire { color: var(--vastu-fire); }
+.text-vastu-air { color: var(--vastu-air); }
+.text-sacred-gold { color: var(--sacred-gold); }
+.text-sacred-copper { color: var(--sacred-copper); }
+.text-sacred-deep { color: var(--sacred-deep); }
+
+.border-vastu-earth { border-color: var(--vastu-earth); }
+.border-sacred-gold { border-color: var(--sacred-gold); }
+
+/* Sacred geometry animations */
+@keyframes vastu-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.vastu-pulse {
+  animation: vastu-pulse 3s ease-in-out infinite;
+}
+
+@keyframes sacred-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.sacred-rotate-slow {
+  animation: sacred-rotate 20s linear infinite;
 }

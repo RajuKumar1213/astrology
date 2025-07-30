@@ -42,9 +42,9 @@ function Navbar() {
           {/* Logo */}
           <Link href="/">
             <div className="flex-shrink-0 flex items-center">
-              <IoMdPlanet className="h-10 w-10 text-purple-600" />
-              <span className="ml-3 text-2xl font-bold tracking-tight text-purple-700">
-                Neelam<span className="text-purple-600">astrovastu</span>
+              <IoMdPlanet className="h-10 w-10 text-amber-600 sacred-rotate-slow" />
+              <span className="ml-3 text-2xl font-bold tracking-tight text-amber-700">
+                Neelam<span className="text-orange-600"> Astrovastu</span>
               </span>
             </div>
           </Link>
@@ -77,7 +77,7 @@ function Navbar() {
               }`}>
                 <a 
                   href="/consultancy/home" 
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors"
+                  className="block px-4 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
                 >
                   <div className="flex items-center">
                     <span className="text-sm font-medium">Home</span>
@@ -86,7 +86,7 @@ function Navbar() {
                 </a>
                 <a 
                   href="/consultancy/office" 
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors"
+                  className="block px-4 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
                 >
                   <div className="flex items-center">
                     <span className="text-sm font-medium">Office</span>
@@ -95,7 +95,7 @@ function Navbar() {
                 </a>
                 <a 
                   href="/consultancy/factory" 
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors"
+                  className="block px-4 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
                 >
                   <div className="flex items-center">
                     <span className="text-sm font-medium">Factory</span>
@@ -104,7 +104,7 @@ function Navbar() {
                 </a>
                 <a 
                   href="/consultancy/commercial" 
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors"
+                  className="block px-4 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
                 >
                   <div className="flex items-center">
                     <span className="text-sm font-medium">Commercial</span>
@@ -114,7 +114,7 @@ function Navbar() {
                 <hr className="my-2 border-gray-200" />
                 <a 
                   href="/meet-astrologer" 
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors"
+                  className="block px-4 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
                 >
                   <div className="flex items-center">
                     <span className="text-sm font-medium">Meet the Astrologer</span>
@@ -172,27 +172,27 @@ function Navbar() {
             <div className="ml-4 space-y-1">
               <a
                 href="/consultancy/home"
-                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300">
+                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-amber-50 hover:text-amber-700 transition-all duration-300">
                 Home
               </a>
               <a
                 href="/consultancy/office"
-                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300">
+                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-amber-50 hover:text-amber-700 transition-all duration-300">
                 Office
               </a>
               <a
                 href="/consultancy/factory"
-                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300">
+                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-amber-50 hover:text-amber-700 transition-all duration-300">
                 Factory
               </a>
               <a
                 href="/consultancy/commercial"
-                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300">
+                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-amber-50 hover:text-amber-700 transition-all duration-300">
                 Commercial
               </a>
               <a
                 href="/meet-astrologer"
-                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300">
+                className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-amber-50 hover:text-amber-700 transition-all duration-300">
                 Meet the Astrologer
               </a>
             </div>
@@ -200,13 +200,13 @@ function Navbar() {
           
           <a
             href="/services"
-            className="flex items-center px-4 py-3 rounded-xl text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 font-medium">
+            className="flex items-center px-4 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all duration-300 font-medium">
             <GiCrystalBall className="mr-3" /> Services
           </a>
           
           <a
             href="/contact"
-            className="flex items-center px-4 py-3 rounded-xl text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 font-medium">
+            className="flex items-center px-4 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all duration-300 font-medium">
             Contact
           </a>
         </div>

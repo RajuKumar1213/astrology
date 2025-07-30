@@ -70,13 +70,13 @@ const CommercialConsultancyPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-emerald-50">
+      <section className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 via-white to-emerald-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="flex items-center space-x-2 text-purple-600">
+                <div className="flex items-center space-x-2 text-orange-600">
                   <FaStore className="text-xl" />
                   <span className="text-sm font-semibold uppercase tracking-wide">
                     Commercial Consultancy
@@ -84,7 +84,7 @@ const CommercialConsultancyPage = () => {
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                   Boost Your Business
-                  <span className="text-purple-600"> Success</span>
+                  <span className="text-orange-600"> Success</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Transform your commercial space into a customer magnet and
@@ -98,8 +98,8 @@ const CommercialConsultancyPage = () => {
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className="flex items-start space-x-3 p-4 bg-white rounded-lg shadow-sm border border-purple-100">
-                    <div className="text-purple-600 text-xl mt-1">
+                    className="flex items-start space-x-3 p-4 bg-white rounded-lg shadow-sm border border-orange-100">
+                    <div className="text-orange-600 text-xl mt-1">
                       {feature.icon}
                     </div>
                     <div>
@@ -129,7 +129,7 @@ const CommercialConsultancyPage = () => {
                   className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
                 />
                 {/* Floating Elements */}
-                <div className="absolute -top-6 -left-6 bg-purple-600 text-white p-4 rounded-xl shadow-lg">
+                <div className="absolute -top-6 -left-6 bg-orange-600 text-white p-4 rounded-xl shadow-lg">
                   <FaDollarSign className="text-2xl" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-emerald-500 text-white p-4 rounded-xl shadow-lg">
@@ -137,7 +137,7 @@ const CommercialConsultancyPage = () => {
                 </div>
               </div>
               {/* Background Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-200/30 to-emerald-200/30 rounded-2xl transform rotate-3 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-200/30 to-emerald-200/30 rounded-2xl transform rotate-3 -z-10"></div>
             </div>
           </div>
         </div>
@@ -170,8 +170,8 @@ const CommercialConsultancyPage = () => {
           </h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-purple-600">1</span>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl font-bold text-orange-600">1</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900">
                 Business Study
@@ -181,8 +181,8 @@ const CommercialConsultancyPage = () => {
               </p>
             </div>
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-purple-600">2</span>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl font-bold text-orange-600">2</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900">
                 Space Analysis
@@ -192,8 +192,8 @@ const CommercialConsultancyPage = () => {
               </p>
             </div>
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-purple-600">3</span>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl font-bold text-orange-600">3</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900">
                 Energy Optimization
@@ -203,8 +203,8 @@ const CommercialConsultancyPage = () => {
               </p>
             </div>
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-purple-600">4</span>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <span className="text-2xl font-bold text-orange-600">4</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900">
                 Results Tracking
@@ -218,7 +218,7 @@ const CommercialConsultancyPage = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-emerald-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-emerald-50">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -244,7 +244,7 @@ const CommercialConsultancyPage = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -258,7 +258,7 @@ const CommercialConsultancyPage = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -273,7 +273,7 @@ const CommercialConsultancyPage = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                 placeholder="Enter your email address"
               />
             </div>
@@ -289,7 +289,7 @@ const CommercialConsultancyPage = () => {
                   value={formData.location}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                   placeholder="e.g., Mumbai, Maharashtra"
                 />
               </div>
@@ -303,7 +303,7 @@ const CommercialConsultancyPage = () => {
                   value={formData.area}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                   placeholder="e.g., 3000 sq ft"
                 />
               </div>
@@ -318,7 +318,7 @@ const CommercialConsultancyPage = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                 placeholder="Describe your business type and specific goals..."
               />
             </div>
