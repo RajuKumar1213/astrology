@@ -76,10 +76,10 @@ const MeetAstrologerPage = () => {
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                   Meet 
-                  <span className="text-orange-600"> Manto Kumar Thakur</span>
+                  <span className="text-orange-600"> Mantu Thakur</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  With over 15 years of experience in Vedic astrology and Vastu Shastra, Manto Kumar Thakur has guided thousands of souls toward their destined path of prosperity, love, and spiritual fulfillment through ancient wisdom and cosmic insights.
+                  Certified Vastu Consultant And Astro Vastu Specialist.
                 </p>
               </div>
 

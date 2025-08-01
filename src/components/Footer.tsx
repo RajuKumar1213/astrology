@@ -111,8 +111,9 @@ const Footer = () => {
                   <FaMapMarkerAlt className="text-amber-400 group-hover:text-white" />
                 </div>
                 <span className="text-gray-300 group-hover:text-white transition-colors">
-                  Antu chowk, Tetartoli, Morabadi<br />
-                  Ranchi, Jharkhand 834008
+                  Friends Colony, Pandra<br />
+                  Near Ranchi Darbar Banquet Hall<br />
+                  Ranchi - 835222
                 </span>
               </div>
             </div>

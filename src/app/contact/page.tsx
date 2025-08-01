@@ -36,7 +36,7 @@ const ContactPage = () => {
       <section className="pt-38 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-3 ">
-            Contact Manto Kumar Thakur
+            Contact Mantu Thakur
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Ready to transform your space with ancient Vastu wisdom? Our experienced Vastu consultant 
@@ -187,9 +187,9 @@ const ContactPage = () => {
                     <div>
                       <h4 className=" font-semibold">Address</h4>
                       <p className="text-gray-700">
-                        Antu chowk, Tetartoli, Morabadi<br />
-                        Ranchi, Jharkhand 834008<br />
-                        India
+                        Friends Colony, Pandra<br />
+                        Near Ranchi Darbar Banquet Hall<br />
+                        Ranchi - 835222
                       </p>
                     </div>
                   </div>
