@@ -87,21 +87,32 @@ const Footer = () => {
                 <div className="p-2 bg-amber-900/30 rounded-full group-hover:bg-amber-600 transition-colors">
                   <FaPhone className="text-amber-400 group-hover:text-white" />
                 </div>
-                <span className="text-gray-300 group-hover:text-white transition-colors">+1 (555) 123-STAR</span>
+                <div className="text-gray-300 group-hover:text-white transition-colors">
+                  <div>
+                    <a href="tel:+918603144344" className="hover:text-amber-300 transition-colors">
+                      Call: 8603144344
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://wa.me/917763889772" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors">
+                      WhatsApp: 7763889772
+                    </a>
+                  </div>
+                </div>
               </div>
               <div className="flex items-center space-x-3 group">
                 <div className="p-2 bg-amber-900/30 rounded-full group-hover:bg-amber-600 transition-colors">
                   <FaEnvelope className="text-amber-400 group-hover:text-white" />
                 </div>
-                <span className="text-gray-300 group-hover:text-white transition-colors">hello@Neelamastrovastu.com</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors">mantokumarthakur@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3 group">
                 <div className="p-2 bg-amber-900/30 rounded-full group-hover:bg-amber-600 transition-colors mt-1">
                   <FaMapMarkerAlt className="text-amber-400 group-hover:text-white" />
                 </div>
                 <span className="text-gray-300 group-hover:text-white transition-colors">
-                  123 Cosmic Avenue<br />
-                  Mystical City, MC 12345
+                  Antu chowk, Tetartoli, Morabadi<br />
+                  Ranchi, Jharkhand 834008
                 </span>
               </div>
             </div>

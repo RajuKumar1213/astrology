@@ -5,9 +5,9 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    // Replace with your actual WhatsApp number
-    const phoneNumber = "919876543210"; // Example: Indian number format
-    const message = "Hi! I'm interested in astrology consultation. Please help me get started.";
+    // Your actual WhatsApp number
+    const phoneNumber = "917763889772"; // Manto Kumar Thakur's WhatsApp number
+    const message = "Hi! I'm interested in Vastu consultation and astrology guidance. Please help me get started.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };

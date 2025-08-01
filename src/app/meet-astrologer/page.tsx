@@ -41,12 +41,12 @@ const MeetAstrologerPage = () => {
   ];
 
   const qualifications = [
-    'Master&apos;s in Vedic Astrology from Sanskrit University',
-    '15+ years of professional astrological practice',
-    'Certified Vastu Shastra consultant',
-    'Author of 3 books on astrology and cosmic sciences',
-    '10,000+ successful consultations worldwide',
-    'Featured astrologer on national TV channels'
+    'Master\'\s in Vedic Astrology and Vastu Shastra from Sanskrit University',
+    '15+ years of professional Vastu and astrological practice',
+    'Certified Vastu Shastra consultant and remedial expert',
+    'Specialist in residential and commercial space harmonization',
+    '500+ successful Vastu and astrology consultations worldwide',
+    'Renowned consultant featured on regional TV channels and publications'
   ];
 
   const consultationTypes = [
@@ -76,10 +76,10 @@ const MeetAstrologerPage = () => {
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                   Meet 
-                  <span className="text-orange-600"> Pandit Rajesh Sharma</span>
+                  <span className="text-orange-600"> Manto Kumar Thakur</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  With over 15 years of experience in Vedic astrology and Vastu Shastra, Pandit Rajesh Sharma has guided thousands of souls toward their destined path of prosperity, love, and spiritual fulfillment.
+                  With over 15 years of experience in Vedic astrology and Vastu Shastra, Manto Kumar Thakur has guided thousands of souls toward their destined path of prosperity, love, and spiritual fulfillment through ancient wisdom and cosmic insights.
                 </p>
               </div>
 
@@ -114,8 +114,8 @@ const MeetAstrologerPage = () => {
             <div className="relative">
               <div className="relative z-10">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                  alt="Pandit Rajesh Sharma - Expert Astrologer"
+                  src="/owner.jpg"
+                  alt="Manto Kumar Thakur - Expert Vastu & Astrology Consultant"
                   className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
                 />
                 {/* Floating Elements */}
@@ -201,7 +201,12 @@ const MeetAstrologerPage = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8 space-y-6">
+          <form 
+            action="https://formsubmit.co/mantokumarthakur@gmail.com" 
+            method="POST" 
+            onSubmit={handleSubmit} 
+            className="bg-white rounded-2xl shadow-xl p-8 space-y-6"
+          >
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
@@ -319,7 +324,7 @@ const MeetAstrologerPage = () => {
               type="submit"
               className="w-full  transition-all duration-300 transform hover:scale-105"
             >
-              Book Consultation with Astrologer
+              Book Consultation with Manto Kumar Thakur
             </Button>
           </form>
         </div>

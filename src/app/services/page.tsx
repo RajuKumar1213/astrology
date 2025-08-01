@@ -172,6 +172,13 @@ const servicesData = [
 ];
 
 const ServicesPage = () => {
+  const handleServiceInquiry = (serviceTitle: string) => {
+    const phoneNumber = "917763889772"; // Manto Kumar Thakur's WhatsApp number
+    const message = `Hi! I'm interested in "${serviceTitle}" consultation. Could you please provide more details about this service and help me get started?`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -244,11 +251,12 @@ const ServicesPage = () => {
                   </div>
                   
                   {/* CTA Button */}
-                  <Link href="/contact">
-                    <button className={`w-full bg-black text-white font-semibold py-3 px-4 rounded-lg transition-all hover:shadow-md hover:bg-gray-800`}>
-                      Get Consultation
-                    </button>
-                  </Link>
+                  <button 
+                    onClick={() => handleServiceInquiry(service.title)}
+                    className={`w-full bg-black text-white font-semibold py-3 px-4 rounded-lg transition-all hover:shadow-md hover:bg-gray-800`}
+                  >
+                    Get Consultation
+                  </button>
                 </div>
               </div>
             ))}

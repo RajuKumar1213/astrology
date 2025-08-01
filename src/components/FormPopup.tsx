@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { FaTimes, FaStar, FaGift } from 'react-icons/fa';
-import { GiCrystalBall } from 'react-icons/gi';
+import React, { useState, useEffect } from "react";
+import { FaTimes, FaStar, FaGift } from "react-icons/fa";
+import { GiCrystalBall } from "react-icons/gi";
 
 const FormPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    birthDate: '',
-    birthTime: '',
-    birthPlace: '',
-    gender: '',
-    mobile: '',
-    interest: ''
+    name: "",
+    email: "",
+    birthDate: "",
+    birthTime: "",
+    birthPlace: "",
+    gender: "",
+    mobile: "",
+    interest: "",
   });
   const [hasScrolled, setHasScrolled] = useState(false);
 
@@ -29,21 +29,23 @@ const FormPopup = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [hasScrolled]);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     setIsVisible(false);
     // You can add API call here to submit the data
   };
@@ -60,8 +62,7 @@ const FormPopup = () => {
         {/* Close Button */}
         <button
           onClick={closePopup}
-          className="absolute top-4 right-4 z-10 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full transition-all duration-300"
-        >
+          className="absolute top-4 right-4 z-10 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full transition-all duration-300">
           <FaTimes />
         </button>
 
@@ -81,9 +82,9 @@ const FormPopup = () => {
               Transform Your Life with Vastu!
             </h2>
             <p className="text-gray-300 text-lg mb-6">
-              Get a FREE personalized Vastu consultation 
+              Get a FREE personalized Vastu consultation
             </p>
-            
+
             {/* Special Offer Badge */}
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6">
               <FaGift />
@@ -93,7 +94,10 @@ const FormPopup = () => {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="px-8 pb-8 space-y-6">
+        <form
+          action="https://formsubmit.co/mantokumarthakur@gmail.com"
+          method="POST"
+          className="px-8 pb-8 space-y-6">
           {/* Name and Email Row */}
           <div className="grid md:grid-cols-2 gap-4">
             <div>
@@ -196,12 +200,19 @@ const FormPopup = () => {
                 value={formData.gender}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
-              >
-                <option value="" className="bg-purple-900">Select Gender</option>
-                <option value="male" className="bg-purple-900">Male</option>
-                <option value="female" className="bg-purple-900">Female</option>
-                <option value="other" className="bg-purple-900">Other</option>
+                className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300">
+                <option value="" className="bg-purple-900">
+                  Select Gender
+                </option>
+                <option value="male" className="bg-purple-900">
+                  Male
+                </option>
+                <option value="female" className="bg-purple-900">
+                  Female
+                </option>
+                <option value="other" className="bg-purple-900">
+                  Other
+                </option>
               </select>
             </div>
           </div>
@@ -215,23 +226,42 @@ const FormPopup = () => {
               name="interest"
               value={formData.interest}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
-            >
-              <option value="" className="bg-purple-900">Choose your focus</option>
-              <option value="home-vastu" className="bg-purple-900">Home Vastu Consultation</option>
-              <option value="office-vastu" className="bg-purple-900">Office Vastu Consultation</option>
-              <option value="factory-vastu" className="bg-purple-900">Factory Vastu Consultation</option>
-              <option value="commercial-vastu" className="bg-purple-900">Commercial Vastu Consultation</option>
-              <option value="vastu-visit" className="bg-purple-900">Vastu Site Visit</option>
-              <option value="career" className="bg-purple-900">Career & Money Guidance</option>
-              <option value="spiritual" className="bg-purple-900">Spiritual Growth</option>
-              <option value="health" className="bg-purple-900">Health & Wellness</option>
+              className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-xl text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300">
+              <option value="" className="bg-purple-900">
+                Choose your focus
+              </option>
+              <option value="home-vastu" className="bg-purple-900">
+                Home Vastu Consultation
+              </option>
+              <option value="office-vastu" className="bg-purple-900">
+                Office Vastu Consultation
+              </option>
+              <option value="factory-vastu" className="bg-purple-900">
+                Factory Vastu Consultation
+              </option>
+              <option value="commercial-vastu" className="bg-purple-900">
+                Commercial Vastu Consultation
+              </option>
+              <option value="vastu-visit" className="bg-purple-900">
+                Vastu Site Visit
+              </option>
+              <option value="career" className="bg-purple-900">
+                Career & Money Guidance
+              </option>
+              <option value="spiritual" className="bg-purple-900">
+                Spiritual Growth
+              </option>
+              <option value="health" className="bg-purple-900">
+                Health & Wellness
+              </option>
             </select>
           </div>
 
           {/* Benefits List */}
           <div className="bg-white/5 rounded-xl p-4 border border-purple-500/30">
-            <h3 className="text-white font-semibold mb-3">Your FREE consultation includes:</h3>
+            <h3 className="text-white font-semibold mb-3">
+              Your FREE consultation includes:
+            </h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li className="flex items-center space-x-2">
                 <span className="text-green-400">✓</span>
@@ -259,8 +289,7 @@ const FormPopup = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-          >
+            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
             Submit, We will connect you shortly. 🏠
           </button>
 

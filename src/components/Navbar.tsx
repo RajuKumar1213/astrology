@@ -2,11 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import {
-  FaStar,
   FaBars,
   FaTimes,
-  FaHeart,
-  FaGem,
 } from "react-icons/fa";
 import { IoIosContacts, IoMdPlanet } from "react-icons/io";
 import { GiCrystalBall, GiMagicSwirl } from "react-icons/gi";
@@ -129,17 +126,14 @@ function Navbar() {
               className="text-black hover:text-gray-600 transition-colors flex items-center font-medium">
               <GiCrystalBall className="mr-2 text-md" /> Services
             </a>
-            <a
-              href="/contact"
-              className="text-black hover:text-gray-600 transition-colors font-medium">
-              Contact
-            </a>
 
-            <Link href="tel:+15551234567">
-              <Button className=" font-medium transition-all duration-300">
-                Call Now
+
+            {/* Desktop: Contact Button */}
+            <a href="/contact">
+              <Button className="font-medium transition-all duration-300">
+                Contact
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -209,6 +203,15 @@ function Navbar() {
             className="flex items-center px-4 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all duration-300 font-medium">
             Contact
           </a>
+          
+          {/* Mobile menu contact button */}
+          <div className="flex items-center justify-center px-4 py-3">
+            <a href="/contact" className="w-full">
+              <Button className="w-full font-medium transition-all duration-300 flex items-center justify-center gap-2 text-sm">
+                Contact Us
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
